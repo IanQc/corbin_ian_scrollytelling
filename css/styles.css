@@ -1,0 +1,253 @@
+@font-face {
+    src: url("../font/abnes.otf") format("opentype");
+    font-family: "Hell";
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+section{
+    width: 100vw;
+    height: 400vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid red;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
+    color: #ffe436;
+    text-align: center;
+}
+
+h1{
+    z-index: 1;
+    display: inline-block;
+    font-size: 80px;
+    font-family: "Hell";
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 40px;
+    }
+    .soustitre {
+        font-size: 10px;
+    }
+}
+
+#Deep_Space {
+    background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
+    position: relative;
+}
+
+#Space {
+    background-image: url(../img/img_arriere_plan/background_ciel_01.png) ;
+    position: relative;
+}
+
+#orbit {
+    background-image: url(../img/img_arriere_plan/background_ciel_02.png) ;
+    position: relative;
+}
+
+#exosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_03.png) ;
+    position: relative;
+}
+
+#thermosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_04.png) ;
+    position: relative;
+}
+
+#mesosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_05.png) ;
+    position: relative;
+}
+
+
+#stratosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_06.png) ;
+    position: relative;
+}
+
+#troposphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_07.png) ;
+    position: relative;
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+}
+
+.fleche{
+   position: absolute;
+   left: 50vw;
+   top: 50vh;
+   fill: aqua;
+   overflow: hidden;
+}
+
+.stars1 {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-size: fill;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_01.svg);
+   
+}
+
+.stars2 {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_02.svg);
+    
+}
+.stars3 {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_03.svg);
+   
+}
+.stars4 {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
+  ;
+}
+.stars5 {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_05.svg);
+   
+}
+
+
+.bruh {
+   
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_complet.svg);
+    
+}
+
+.titre {
+    position: absolute;
+    z-index: 0;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.soustitre {
+    position: absolute;
+    z-index: 0;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pod {
+    opacity: 0;
+    width: 5vw;
+    position: fixed;
+    left: 47.5%;
+    top: 50vh;
+    z-index: 1;
+}
+
+
+
+.nuage {
+    width: 15vw;
+    position: absolute;
+    
+}
+
+.nuage.un{
+    right: 10vw;
+    top: 45vh;
+ }
+
+.nuage.deux{
+   left: 10vw;
+   top: 25vh;
+}
+
+.nuage.trois{
+    left: 45vw;
+    top: 65vh;
+ }
+
+ .flamme {
+    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
+    width: 7.5vw;
+    opacity: 0;
+    aspect-ratio: 1/1;
+    animation-name: marche;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
+
+    position: fixed;
+    left: 46.25%;
+    top: 55vh;
+    z-index: 1;
+}
+
+@keyframes marche {
+    from { background-position: 0 0; }
+    to { background-position: -2000% 0; }
+}
+
+#path {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+
+}
+
+
+
+.down {
+    position: absolute;
+    margin-top: 45vh;
+    left: 47.5%;
+}
+
+.fleche-down {
+    font-size: 10px;
+    display: block;
+    filter: drop-shadow(0 0 10px var(--blanc));
+    width: 5vw;
+}
+
+
+
