@@ -12,11 +12,11 @@
     <header>
         <div class="container">
             <div class="titre">
-                <h1>Soldat de l'espace</h1>
+                <h1 class="titreAnim">weytfw iweufhwei weifhu </h1>
             </div>
             <div class="soustitre">
-                <p>Projet scrollytelling créé dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency.</p>
-                <p>© 2024 - Conception : Ian Corbin | Développement Web : Ian Corbin</p>
+                <p class="soustitre01"></p>
+                <p class="soustitre02"></p>
                 <button></button>
             </div>
             <div class="down">
@@ -41,8 +41,11 @@
        
         
     </header>
-    <div class="flamme"></div>      
-    <div class="pod"><img src="./img/img_elements_visuels/drop_pod_01.svg"></div>    
+    <div class="pod-container">
+        <div class="flamme"></div>      
+        <div class="pod"><img src="./img/img_elements_visuels/drop_pod_01.svg"></div>   
+    </div>
+ 
     <main>
         
         <section id="Deep_Space">
@@ -115,15 +118,18 @@
         </section>
         
         <section id="troposphere">
-            <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
-            <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_02.svg">
-            <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
-            <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_02.svg">
-            <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
-
-            <img class="montagne" src="./img/img_arriere_plan/background_montagne.svg">
-            <img class="sol1" src="./img/img_arriere_plan/background_sol.svg">
-            <img class="sol2" src="./img/img_arriere_plan/background_sol2.svg">
+                <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
+                <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_02.svg">
+                <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
+                <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_02.svg">
+                <img class="oiseau" src="./img/img_elements_visuels/oiseau/oiseau_01.svg">
+                <div class="terrain">    
+                    <img class="montagne" src="./img/img_arriere_plan/background_montagne.svg">
+                    <img class="sol1" src="./img/img_arriere_plan/background_sol.svg">
+                    <img class="sol2" src="./img/img_arriere_plan/background_sol2.svg">
+                </div>
+            
+           
         </section>
         
 
@@ -133,6 +139,7 @@
         <p>© 2024 - Conception : Ian Corbin | Développement Web : Ian Corbin</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TextPlugin3.min.js"></script>

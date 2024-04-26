@@ -1,6 +1,14 @@
+/*--------------------------------------------------------- 
+# Styles Généraux
+---------------------------------------------------------*/ 
 @font-face {
     src: url("../font/abnes.otf") format("opentype");
     font-family: "Hell";
+  }
+
+  @font-face {
+    src: url("../font/sf-distant-galaxy.symbols.ttf") format("truetype");
+    font-family: "star";
   }
 
 * {
@@ -26,7 +34,7 @@ header {
     width: 100vw;
     height: 100vh;
     background-image: url(../img/img_arriere_plan/intro/galaxy-night-panoramic.jpg) ;
-    color: #ffe436;
+    
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,7 +44,8 @@ h1{
     z-index: 1;
     display: inline-block;
     font-size: 80px;
-    font-family: "Hell";
+    font-family: "star";
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -48,57 +57,10 @@ h1{
     }
 }
 
-#Deep_Space {
-    background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
-    position: relative;
-}
 
-#Space {
-    background-image: url(../img/img_arriere_plan/background_ciel_01.png) ;
-    position: relative;
-}
-
-#orbit {
-    background-image: url(../img/img_arriere_plan/background_ciel_02.png) ;
-    position: relative;
-}
-
-#exosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_03.png) ;
-    position: relative;
-}
-
-#thermosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_04.png) ;
-    position: relative;
-}
-
-#mesosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_05.png) ;
-    position: relative;
-}
-
-
-#stratosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_06.png) ;
-    position: relative;
-}
-
-#troposphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_07.png) ;
-    position: relative;
-}
-
-
-
-.fleche{
-   position: absolute;
-   left: 50vw;
-   top: 50vh;
-   fill: aqua;
-   overflow: hidden;
-}
-
+/*--------------------------------------------------------- 
+# Étoiles
+---------------------------------------------------------*/ 
 .stars1 {
     position: absolute;
     z-index: 2;
@@ -136,18 +98,6 @@ h1{
     background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
 }
 
-#Space .stars4 {
-
-    position: absolute;
-    z-index: 5;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
-}
-
-
-
 .stars5 {
     position: absolute;
     z-index: 6;
@@ -158,34 +108,9 @@ h1{
    
 }
 
-
-.bruh {
-   
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-image: url(../img/img_elements_visuels/stars/background_stars_complet.svg);
-    
-}
-
-.titre {
-    position: absolute;
-    z-index: 0;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.soustitre {
-    position: absolute;
-    z-index: 0;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
+/*--------------------------------------------------------- 
+# Pod
+---------------------------------------------------------*/ 
 .pod {
     opacity: 0;
     width: 5vw;
@@ -194,6 +119,29 @@ h1{
     top: 50vh;
     z-index: 5;
 }
+
+.flamme {
+    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
+    width: 9.5vw;
+    opacity: 0;
+    aspect-ratio: 1/1;
+    animation-name: marche;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
+    
+    position: fixed;
+    left: 45.25%;
+    top: 50vh;
+    z-index: 5;
+}
+
+@keyframes marche {
+    from { background-position: 0 0; }
+    to { background-position: -2000% 0; }
+}
+
 
 /*--------------------------------------------------------- 
 # Nuage
@@ -271,41 +219,34 @@ filter: blur(3px) contrast(10%);
     width: 2vw;
     filter: grayscale(50%);
 }
-
 /*--------------------------------------------------------- 
-# Styles Généraux 
+# Intro
 ---------------------------------------------------------*/ 
- .flamme {
-    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
-    width: 7.5vw;
-    opacity: 0;
-    aspect-ratio: 1/1;
-    animation-name: marche;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(20);
-    background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
-
-    position: fixed;
-    left: 46.25%;
-    top: 55vh;
-    z-index: 5;
-}
-
-@keyframes marche {
-    from { background-position: 0 0; }
-    to { background-position: -2000% 0; }
-}
-
-#path {
-    top: 0;
-    left: 0;
+.titre {
     position: absolute;
     z-index: 0;
-
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
+.titreAnim {
+    color: red;
+}
 
+.soustitre {
+    position: absolute;
+    z-index: 0;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.soustitre01, .soustitre02 {
+    color: red;
+}
 
 .down {
     position: absolute;
@@ -320,7 +261,77 @@ filter: blur(3px) contrast(10%);
     width: 5vw;
 }
 
+/*--------------------------------------------------------- 
+# Chapitre1
+---------------------------------------------------------*/ 
+#Deep_Space {
+    background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
+    position: relative;
+}
+/*--------------------------------------------------------- 
+# Chapitre2
+---------------------------------------------------------*/ 
+#Space {
+    background-image: url(../img/img_arriere_plan/background_ciel_01.png) ;
+    position: relative;
+}
 
+#Space .stars4 {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
+}
+
+
+
+
+/*--------------------------------------------------------- 
+# Chapitre3
+---------------------------------------------------------*/ 
+#orbit {
+    background-image: url(../img/img_arriere_plan/background_ciel_02.png) ;
+    position: relative;
+}
+
+/*--------------------------------------------------------- 
+# Chapitre4
+---------------------------------------------------------*/ 
+#exosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_03.png) ;
+    position: relative;
+}
+
+/*--------------------------------------------------------- 
+# Chapitre5
+---------------------------------------------------------*/ 
+#thermosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_04.png) ;
+    position: relative;
+}
+/*--------------------------------------------------------- 
+# Chapitre6
+---------------------------------------------------------*/ 
+#mesosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_05.png) ;
+    position: relative;
+}
+/*--------------------------------------------------------- 
+# Chapitre7
+---------------------------------------------------------*/ 
+#stratosphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_06.png) ;
+    position: relative;
+}
+/*--------------------------------------------------------- 
+# Chapitre8
+---------------------------------------------------------*/ 
+#troposphere {
+    background-image: url(../img/img_arriere_plan/background_ciel_07.png) ;
+    position: relative;
+}
 .sol {
     width: 100%;
     height: 100%;
@@ -332,7 +343,7 @@ filter: blur(3px) contrast(10%);
 
 .montagne {
     position: absolute;
-    bottom: 45vh;
+    bottom:20%;
     z-index: 3;
 }
 
@@ -345,7 +356,15 @@ filter: blur(3px) contrast(10%);
 
 .sol2 {
     position: absolute;
-    bottom: 40vh;
+    bottom: 20%;
     z-index: 4;
 
 }
+
+.terrain {
+    position: relative;
+    width: 100vw;
+    height: 60%;
+    top: 100%;
+}
+

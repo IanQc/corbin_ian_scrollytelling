@@ -6,6 +6,34 @@ temps.to(fleche, { y: 0, duration: 1, opacity:0 , ease: 'power1.in' });
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(TextPlugin);
+
+/*------------Intro------------ */ 
+
+let timeline = gsap.timeline();
+
+
+timeline.to(".titreAnim", {
+    delay: 1,
+    duration: 2,
+    ease: "slow.in",
+    text: "Soldat de l'espace",
+    fontFamily: "Hell",
+    color:"#ffe436"
+})
+.to(".soustitre01", {
+    duration: 2,
+    ease: "power4",
+    color:"#ffe436" ,
+    text: "Projet scrollytelling créé dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency."
+}, "-=1")
+.to(".soustitre02", {
+    duration: 2,
+    ease: "power4",
+    color:"#ffe436" ,
+    text: "© 2024 - Conception : Ian Corbin | Développement Web : Ian Corbin"
+}, "-=1");
+
 /*
 gsap.to('.stars2', {
   scrollTrigger: 'stars2',
@@ -111,15 +139,6 @@ gsap.timeline().from(['.fleche-down'], {
     stagger: {
         each: 0.5,
     },
-}).to('#chapitre1', {
-    scrollTrigger: {
-        markers: true,
-        scrub: 1,
-        trigger: '#Deep_Space',
-        start: 'top 0%',
-        end: '200% 5%',
-        pin: true,
-    }
 })
 
 
@@ -134,3 +153,18 @@ gsap.to(".stars3", {
         markers: true
     }
 });
+
+
+
+  
+  
+gsap.fromTo('.nuage.quatre', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
+gsap.fromTo('.nuage.six', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:14});
+gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:12});
+gsap.fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15});
+
+gsap.fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10});
+gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 1, duration:14});
+gsap.fromTo('.nuage.cinque', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
+gsap.fromTo('.nuage.huit', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
+gsap.fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15});
