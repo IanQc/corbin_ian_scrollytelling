@@ -10,10 +10,10 @@ gsap.registerPlugin(TextPlugin);
 
 /*------------Intro------------ */ 
 
-let timeline = gsap.timeline();
+let timeline1 = gsap.timeline();
 
 
-timeline.to(".titreAnim", {
+timeline1.to(".titreAnim", {
     delay: 1,
     duration: 2,
     ease: "slow.in",
@@ -92,7 +92,7 @@ gsap.to('#Deep_Space.stars4', {
         markers: true,
         start: 'top 0',
         end: 'bottom 25%',
-        trigger: '.stars4',
+        trigger: '.comete',
     }
     })
     
@@ -130,6 +130,8 @@ gsap.to('.flamme', {
     })
 
 
+    
+
 
 gsap.timeline().from(['.fleche-down'], {
     duration: 0.8,
@@ -154,17 +156,50 @@ gsap.to(".stars3", {
     }
 });
 
+let timeline2 = gsap.timeline();
 
 
-  
-  
-gsap.fromTo('.nuage.quatre', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
+
+
+gsap.to('.comete', { 
+    opacity:1 ,
+    x: "110vw", y:"90vh", ease:"none", duration:5,repeat: -1,
+    repeat:-1,
+    scrollTrigger: {
+        start: 'top',
+        end: 'bottom',
+        trigger: '#DeepSpace',
+        
+    }
+    })
+/*
+    gsap.to('.comete', { 
+        x: "-110vw", y:"90vh", ease:"none", duration:5, rotation: 180,
+        scrollTrigger: {
+            start: 'top 50%',
+            end: 'bottom',
+            trigger: '#DeepSpace',
+        }
+        })
+/*
+gsap.fromTo('.comete', { y:"10vh"}, {x: "110vw", y:"90vh", repeat:-1, ease:"none", duration:5});
+  */
+gsap.fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
 gsap.fromTo('.nuage.six', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:14});
-gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:12});
+gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:20});
 gsap.fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15});
-
+gsap.fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 3, duration:15});
 gsap.fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10});
-gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 1, duration:14});
-gsap.fromTo('.nuage.cinque', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
-gsap.fromTo('.nuage.huit', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
+gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 6, duration:14});
+gsap.fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
+gsap.fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
 gsap.fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15});
+gsap.fromTo('.nuage.douze', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 3, duration:10});
+gsap.fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
+
+
+gsap.fromTo('.oiseau.un', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:8});
+gsap.fromTo('.oiseau.deux', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 3, duration:5});
+gsap.fromTo('.oiseau.trois', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:10});
+gsap.fromTo('.oiseau.quatre', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 1, duration:4});
+gsap.fromTo('.oiseau.cinque', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:9});
