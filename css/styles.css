@@ -1,6 +1,13 @@
 /*--------------------------------------------------------- 
 # Styles Généraux
 ---------------------------------------------------------*/ 
+:root {
+    --noir: black;
+    --blanc: white;
+    --jaune: #ffe436;
+    --rouge: rgb(255,0,0);
+}
+
 @font-face {
     src: url("../font/abnes.otf") format("opentype");
     font-family: "Hell";
@@ -17,6 +24,10 @@
     overflow-x: hidden;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -27,7 +38,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: 3px solid red;
+    border: 3px solid var(--rouge);
     overflow-y: hidden;
 }
 
@@ -60,7 +71,7 @@ h1{
 
 ul.technique-gsap{
     background: rgba(0,0,0,0.3);
-    color: white;
+    color: var(--blanc);
     font-size: 10px;
     font-family: monospace;
     font-weight: 400;
@@ -84,8 +95,8 @@ ul.technique-gsap li{
 .stars1 {
     position: absolute;
     z-index: 2;
-    width: 100%;
     height: 100%;
+    width: 100%;
     background-size: fill;
     background-image: url(../img/img_elements_visuels/stars/background_stars_01.svg);
    
@@ -140,10 +151,28 @@ ul.technique-gsap li{
     z-index: 5;
 }
 
+
 .flamme {
     background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
     width: 9.5vw;
     opacity: 0;
+    aspect-ratio: 1/1;
+    animation-name: marche;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
+    
+    position: fixed;
+    left: 45.25%;
+    top: 50vh;
+    z-index: 5;
+}
+
+.flammetest {
+    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
+    width: 9.5vw;
+    opacity: 1;
     aspect-ratio: 1/1;
     animation-name: marche;
     animation-duration: 2.5s;
@@ -294,7 +323,7 @@ filter: blur(3px) contrast(10%);
 }
 
 .titreAnim {
-    color: red;
+    color: var(--rouge);
 }
 
 .soustitre {
@@ -307,7 +336,7 @@ filter: blur(3px) contrast(10%);
 }
 
 .soustitre01, .soustitre02 {
-    color: red;
+    color: var(--rouge);
 }
 
 .down {
@@ -319,7 +348,7 @@ filter: blur(3px) contrast(10%);
 .fleche-down {
     font-size: 10px;
     display: block;
-    filter: drop-shadow(0 0 10px var(--blanc));
+    
     width: 5vw;
 }
 
@@ -329,12 +358,24 @@ filter: blur(3px) contrast(10%);
 #Deep_Space {
     background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
     position: relative;
+
+}
+
+
+#Deep_Space .stars4 {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 100%;
+
+    background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
+    background-size: cover;
+    background-position: center;
 }
 
 .comete {
     background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_01.png);
-    width: 192px;
-    height: 192px; 
+    width: 5vw; 
     aspect-ratio: 1/1;
     animation-name: marche2;
     animation-duration: 0.75s;
@@ -353,6 +394,21 @@ filter: blur(3px) contrast(10%);
     to { background-position: -700% 0; }
 }
 
+.planet1 {
+    position: absolute;
+    width: 30vw;
+    left: 8%;
+    top: 15%;
+}
+
+.planet2 {
+    position: absolute;
+    width: 20vw;
+    bottom: 25%;
+    right: 10%;
+}
+
+
 /*--------------------------------------------------------- 
 # Chapitre2
 ---------------------------------------------------------*/ 
@@ -361,13 +417,23 @@ filter: blur(3px) contrast(10%);
     position: relative;
 }
 
-#Space .stars4 {
+#Space .stars1 {
     position: absolute;
     z-index: 5;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
+    width: 100vw;
+    height: 100%;
+
     background-image: url(../img/img_elements_visuels/stars/background_stars_04.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.satellite {
+    position: absolute;
+    width: 15vw;
+    left: 8%;
+    top: 25%;
 }
 
 
@@ -420,32 +486,23 @@ filter: blur(3px) contrast(10%);
 .sol {
     width: 100%;
     height: 100%;
-    background-color: #ffe436;
+    background-color: var(--jaune);
     
 }
 
 
 
-.montagne {
+.terrain {
     position: absolute;
-    bottom:45vh;
-    z-index: 3;
+    bottom:0;
+    z-index: 1;
+    width: 100vw;
+    height: 70vh;
 }
 
-.sol1 {
-    position: absolute;
-    
-    z-index: 2;
-    bottom: 0;
-}
 
-.sol2 {
-    position: absolute;
-    bottom: 45vh;
-    z-index: 4;
 
-}
-
+/*
 @media screen and (min-width: 2110px) {
     .montagne {
         bottom:45vh;
@@ -545,4 +602,4 @@ filter: blur(3px) contrast(10%);
     .sol2 {
         bottom:6vh;
     }
-}
+}*/

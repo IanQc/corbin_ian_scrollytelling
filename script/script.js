@@ -1,12 +1,9 @@
-const fleche = document.getElementById('fleche');
-const temps = gsap.timeline({ repeat: -1 });
-
-temps.to(fleche, { y: '10vh', duration: 1, ease: 'slow.out' });
-temps.to(fleche, { y: 0, duration: 1, opacity:0 , ease: 'power1.in' });
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(TextPlugin);
+
+
+
 
 /*------------Intro------------ */ 
 
@@ -156,22 +153,96 @@ gsap.to(".stars3", {
     }
 });
 
+
+
+// Création d'une timeline GSAP
 let timeline2 = gsap.timeline();
 
+// Ajout de l'animation à la timeline
+timeline2.to('.comete', { 
+    opacity: 1,
+    x: "110vw",
+    y: "90vh",
+    ease: "none",
+    duration: 5,
+    
+})
+.to('.comete', { 
+    width: "10vw", 
+    scaleX: -1,
+    ease: "none",
+    duration: 0,
+    delay:2,
+})
+.to('.comete', { 
+    opacity: 1,
+    x: "-110vw",
+    y: "180vh",
+    ease: "none",
+    duration: 6,
+    
+})
+.to('.comete', { 
+    scaleX: 1,
+    ease: "none",
+    duration: 0,
+})
+.to('.comete', { 
+    opacity: 1,
+    x: "110vw",
+    y: "270vh",
+    ease: "none",
+    duration: 4,
+    
+});
+
+
+ScrollTrigger.create({
+    trigger: "#DeepSpace", // Élément qui déclenche l'animation
+    start: "top ", 
+    end: "bottom", 
+    animation: timeline2 
+});
+
+gsap.fromTo('.satellite', {x: "-40vw"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 2 , duration:20});
+
+gsap.fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
+gsap.fromTo('.nuage.six', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out", duration:14});
+gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:20});
+gsap.fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15});
+gsap.fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 3, duration:15});
+
+gsap.fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10});
+gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 6, duration:14});
+gsap.fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
+gsap.fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
+gsap.fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15});
+gsap.fromTo('.nuage.douze', {x: "800%"}, {x: "-700%", repeat:-1, ease:"power1.out", delay: 3, duration:16});
+gsap.fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
+
+
+gsap.fromTo('.oiseau.un', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:8});
+gsap.fromTo('.oiseau.deux', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 3, duration:5});
+gsap.fromTo('.oiseau.trois', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:10});
+gsap.fromTo('.oiseau.quatre', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 1, duration:4});
+gsap.fromTo('.oiseau.cinque', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:9});
 
 
 
+/*
 gsap.to('.comete', { 
     opacity:1 ,
     x: "110vw", y:"90vh", ease:"none", duration:5,repeat: -1,
-    repeat:-1,
     scrollTrigger: {
         start: 'top',
         end: 'bottom',
         trigger: '#DeepSpace',
         
     }
-    })
+    })*/
+
+
+
 /*
     gsap.to('.comete', { 
         x: "-110vw", y:"90vh", ease:"none", duration:5, rotation: 180,
@@ -184,22 +255,50 @@ gsap.to('.comete', {
 /*
 gsap.fromTo('.comete', { y:"10vh"}, {x: "110vw", y:"90vh", repeat:-1, ease:"none", duration:5});
   */
-gsap.fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
-gsap.fromTo('.nuage.six', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:14});
-gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:20});
-gsap.fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15});
-gsap.fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 3, duration:15});
-gsap.fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10});
-gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 6, duration:14});
-gsap.fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
-gsap.fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
-gsap.fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15});
-gsap.fromTo('.nuage.douze', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 3, duration:10});
-gsap.fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
 
 
-gsap.fromTo('.oiseau.un', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:8});
-gsap.fromTo('.oiseau.deux', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 3, duration:5});
-gsap.fromTo('.oiseau.trois', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:10});
-gsap.fromTo('.oiseau.quatre', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 1, duration:4});
-gsap.fromTo('.oiseau.cinque', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:9});
+/*
+// Création de la timeline
+let timeline4 = gsap.timeline({ repeat: -1 });
+
+// Ajout des animations à la timeline
+timeline4.fromTo('.nuage.quatre', { x: "250%" }, { x: "-600%", ease: "power1.out", delay: 2, duration: 10 });
+timeline4.fromTo('.nuage.six', { x: "200%" }, { x: "-600%", ease: "power1.out", duration: 14 }, );
+timeline4.fromTo('.nuage.un', { x: "200%" }, { x: "-600%", ease: "power1.out", delay: 4, duration: 20 }, );
+timeline4.fromTo('.nuage.neuf', { x: "200%" }, { x: "-600%", ease: "power1.out", duration: 15 }, );
+timeline4.fromTo('.nuage.onze', { x: "200%" }, { x: "-800%", ease: "power1.out", delay: 3, duration: 15 },);
+
+timeline4.fromTo('.nuage.deux', { x: "-200%" }, { x: "600%", ease: "power1.out", duration: 10 }, );
+timeline4.fromTo('.nuage.trois', { x: "-200%" }, { x: "600%", ease: "power1.out", delay: 6, duration: 14 }, );
+timeline4.fromTo('.nuage.cinque', { x: "-300%" }, { x: "600%", ease: "power1.out", duration: 12 }, );
+timeline4.fromTo('.nuage.huit', { x: "-400%" }, { x: "400%", ease: "power1.out", delay: 2, duration: 15 }, );
+timeline4.fromTo('.nuage.dix', { x: "-200%" }, { x: "600%", ease: "power1.out", duration: 15 }, );
+timeline4.fromTo('.nuage.douze', { x: "-200%" }, { x: "600%", ease: "power1.out", delay: 3, duration: 10 }, );
+timeline4.fromTo('.nuage.treize', { x: "-200%" }, { x: "700%", ease: "power1.out", duration: 10 }, );
+*/
+
+
+
+/*
+let nuageTime = gsap.timeline();
+
+nuageTime
+    .fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 0, duration:10})
+    .fromTo('.nuage.six', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:14})
+    .fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 0, duration:20})
+    .fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15})
+    .fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 0, duration:15})
+    .fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10})
+    .fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 0, duration:14})
+    .fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12})
+    .fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 0, duration:15})
+    .fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15})
+    .fromTo('.nuage.douze', {x: "800%"}, {x: "-700%", repeat:-1, ease:"power1.out", delay: 0, duration:16})
+    .fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
+
+nuageTime.play(); 
+*/
+
+
+
+
