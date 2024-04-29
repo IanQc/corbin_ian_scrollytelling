@@ -89,6 +89,12 @@ ul.technique-gsap{
 ul.technique-gsap li{
     margin: 5px 0;
 }
+
+footer {
+    text-align: center;
+    background-color: var(--noir);
+    color: var(--blanc);
+}
 /*--------------------------------------------------------- 
 # Étoiles
 ---------------------------------------------------------*/ 
