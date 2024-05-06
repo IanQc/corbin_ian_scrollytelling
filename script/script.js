@@ -1,9 +1,15 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 gsap.registerPlugin(DrawSVGPlugin);
+/*
+gsap.to(".oiseauMorph", {
 
-
+    morphSVG:".poissonMorph",
+    scrollTrigger: {
+        trigger: '.oiseauMorp',
+    }});*/
 /*------------Intro------------ */ 
 
 let timeline1 = gsap.timeline();
@@ -179,7 +185,7 @@ gsap.timeline({scrollTrigger: {
    //pin:true,
     //markers:true,
     trigger: "#Deep_Space", // Élément qui déclenche l'animation
-    start: "top -40%", 
+    start: "top -40vh", 
     end: "bottom",
 }})
 .to('.comete', { 
@@ -438,7 +444,7 @@ gsap.timeline({scrollTrigger: {
     end: "bottom top",
     markers: true
 }})
-.to(['#troposphere .oiseau.un', '#stratosphere .oiseau.deux', '#stratosphere .oiseau.trois', '#stratosphere .oiseau.quatre', '#stratosphere .oiseau.cinque'], { 
+.to(['#troposphere .oiseau.un', '#troposphere .oiseau.deux', '#troposphere .oiseau.trois', '#troposphere .oiseau.quatre', '#troposphere .oiseau.cinque', '#troposphere .oiseau.six'], { 
     x: "120vw", 
     repeat: -1, 
     duration:8,
@@ -448,6 +454,50 @@ gsap.timeline({scrollTrigger: {
     }
 });
 
+let timeline8 = gsap.timeline({
+    scrollTrigger: {
+        
+        markers: false,
+        start: 'top 0',
+        end: 'bottom 0',
+        trigger: '#troposphere',
+        
+    }
+});
+timeline8.to(".oiseauMorph", {morphSVG: ".poissonMorph", repeat: -1, ease:"power1.out"}, "+=0.2");
+
+gsap.set(["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],{drawSVG:"0% 0%"});
+
+gsap.timeline({delay:1, scrollTrigger: {
+    
+    trigger: "#Deep_Space",
+    start: "top bottom",
+    end: "bottom top",
+    markers: true
+}})
+  .fromTo(
+    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
+     {
+      drawSVG:"0% 0%"
+    },
+    {
+      drawSVG:"0% 100%",
+      duration: 3,
+      stagger: {
+        each: 0.3,
+    }
+    }
+  )
+  .fromTo(
+    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
+    {
+      fillOpacity: 0
+    },
+    {
+      fillOpacity: 0.7,
+      duration: 2
+    }
+  );
 /*
 gsap.fromTo('.oiseau.un', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:8});
 gsap.fromTo('.oiseau.deux', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 3, duration:5});
