@@ -157,6 +157,14 @@ footer {
     z-index: 5;
 }
 
+.pod2 {
+    opacity: 1;
+    width: 2vw;
+    position: absolute;
+    left: 30%;
+    top: 50vh;
+    z-index: 1;
+}
 
 .flamme {
     background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
@@ -168,29 +176,15 @@ footer {
     animation-iteration-count: infinite;
     animation-timing-function: steps(20);
     background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
-    
+    animation-play-state: paused;
     position: fixed;
     left: 45.25%;
     top: 50vh;
     z-index: 5;
+    
 }
 
-.flammetest {
-    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
-    width: 9.5vw;
-    opacity: 1;
-    aspect-ratio: 1/1;
-    animation-name: marche;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(20);
-    background-size: 2000% 100%; /* (Largeur de l'image * nombre d'images) / (nombre total d'étapes) */
-    
-    position: fixed;
-    left: 45.25%;
-    top: 50vh;
-    z-index: 5;
-}
+
 
 @keyframes marche {
     from { background-position: 0 0; }
@@ -205,6 +199,7 @@ footer {
 .nuage {
     width: 15vw;
     position: absolute;
+    animation-play-state: paused;
 }
 
 .nuages {
@@ -214,32 +209,32 @@ filter: blur(3px) contrast(10%);
 }
 
 .nuage.un{
-    right: 10%;
+    right: -10vw;
     top: 25%;
  }
 
 .nuage.deux{
-   left: 10%;
+   left: -10vw;
    top: 15%;
 }
 
 .nuage.trois{
-    left: 15%;
+    left: -15vw;
     top: 35%;
 }
 
 .nuage.quatre{
-    left: 65%;
+    right: -35vw;
     top: 45%;
 }
 
 .nuage.cinque{
-    left: 27%;
+    left: -27vw;
     top: 55%;
 }
 
 .nuage.six{
-    left: 85%;
+    right: -15vw;
     top: 5%;
 }
 
@@ -250,33 +245,33 @@ filter: blur(3px) contrast(10%);
 }
 
 .nuage.huit{
-    left: 45%;
+    left: -45vw;
     top: 75%;
    
 }
 
 .nuage.neuf{
-    left: 75%;
+    right: -25vw;
     top: 85%;
 }
 
 .nuage.dix{
-    left: 15%;
+    left: -15vw;
     top: 95%;
 }
 
 .nuage.onze{
-    left: 95%;
+    right: -5vw;
     top: 90%;
 }
 
 .nuage.douze{
-    left: 25%;
+    left: -25vw;
     top: 70%;
 }
 
 .nuage.treize{
-    left: 5%;
+    left: -5vw;
     top: 63%;
 }
 
@@ -292,28 +287,28 @@ filter: blur(3px) contrast(10%);
 }
 
 .oiseau.un {
-    left: 1%;
+    left: -10vw;
     top: 15%;
 }
 
 
 .oiseau.deux {
-    left: 1%;
+    left: -10vw;
     top: 35%;
 }
 
 .oiseau.trois {
-    left: 1%;
+    left: -10vw;
     top: 55%;
 }
 
 .oiseau.quatre {
-    left: 1%;
+    left: -10vw;
     top: 75%;
 }
 
 .oiseau.cinque {
-    left: 1%;
+    left: -10vw;
     top: 95%;
 }
 /*--------------------------------------------------------- 
@@ -388,7 +383,7 @@ filter: blur(3px) contrast(10%);
     animation-iteration-count: infinite;
     animation-timing-function: steps(7);
     background-size: 700% 100%; 
-    
+    opacity: 0;
     position: absolute;
     left: 0%;
     top: 0%;
@@ -405,6 +400,31 @@ filter: blur(3px) contrast(10%);
     width: 30vw;
     left: 8%;
     top: 15%;
+}
+
+.planet3 {
+    background-image: url(../img/img_elements_visuels/planet.png);
+    background-size: cover;
+    position: absolute;
+    width: 30vw;
+    aspect-ratio: 1/1;
+    left: 8%;
+    top: 15%;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.planet4 {
+    background-image: url(../img/img_elements_visuels/planet2.png);
+    background-size: cover;
+    position: absolute;
+    width: 20vw;
+    bottom: 25%;
+    right: 10%;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+    
 }
 
 .planet2 {
@@ -501,7 +521,7 @@ filter: blur(3px) contrast(10%);
 .terrain {
     position: absolute;
     bottom:0;
-    z-index: 1;
+    z-index: 2;
     width: 100vw;
     height: 70vh;
 }
