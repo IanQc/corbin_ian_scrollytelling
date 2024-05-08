@@ -118,6 +118,11 @@ scrollTrigger: {
     trigger: '.stars5',
 }
 })
+  
+  function noActif() {
+    body.classList.remove('is-scrolling');
+  }
+  const body = document.querySelector('body');
     
 gsap.to('.pod', { 
     opacity:1 ,
@@ -126,8 +131,26 @@ gsap.to('.pod', {
         start: 'top',
         end: 'bottom',
         trigger: '.titre',
-    }
-    })
+ }});
+
+            
+gsap.to('.pod', { 
+    scrollTrigger: {
+        start: 'top',
+        end: 'bottom',
+        trigger: body,
+        onUpdate: function(e) {
+            if (e.direction == -1) {
+              body.classList.remove('direction-down');
+              body.classList.add('direction-up');
+            }
+            else if (e.direction == 1) {
+              body.classList.add('direction-down');
+              body.classList.remove('direction-up');
+            }   
+          }
+        }});
+   
 
 
     gsap.to('.flamme', { 
@@ -147,7 +170,22 @@ gsap.to('.pod', {
         }
     });
     
-
+    gsap.to('.flamme', { 
+        scrollTrigger: {
+            start: 'top',
+            end: 'bottom',
+            trigger: body,
+            onUpdate: function(e) {
+                if (e.direction == -1) {
+                  body.classList.remove('direction-down2');
+                  body.classList.add('direction-up2');
+                }
+                else if (e.direction == 1) {
+                  body.classList.add('direction-down2');
+                  body.classList.remove('direction-up2');
+                }
+              }
+            }});
 
     
 
@@ -254,7 +292,15 @@ gsap.to(".planet3", {
 });
 
 
-    
+gsap.to(".galaxie", {
+    rotation: 360,
+    ease: "none",
+    duration: 8,
+    repeat:-1,
+    scrollTrigger: {
+      trigger: ".galaxie",
+    }
+});
 
 
 gsap.to(".planet4", {
@@ -269,10 +315,13 @@ gsap.to(".planet4", {
 gsap.to('.pod2', {
     transformOrigin: '50% 50%',
     motionPath: {
+      
       path: [
-        {x: "0vw", y: "25vh"}, 
-        {x: "75vw", y: "375vh"}
+        {x: "-10vw", y: "15vh"}, 
+        {x: "10vw", y: "150vh"}, 
+        {x: "85vw", y: "375vh"}
       ],
+      
     },
     duration: 8,
     repeat: -1,
@@ -482,7 +531,7 @@ gsap.timeline({delay:1, scrollTrigger: {
     },
     {
       drawSVG:"0% 100%",
-      duration: 3,
+      duration: 2,
       stagger: {
         each: 0.3,
     }

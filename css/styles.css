@@ -157,6 +157,16 @@ footer {
     z-index: 5;
 }
 
+.direction-down .pod {
+    transform: scaleY(1);
+  }
+  
+
+  .direction-up .pod {
+    transform: scaleY(-1);
+  }
+  
+
 .pod2 {
     opacity: 1;
     width: 2vw;
@@ -185,7 +195,15 @@ footer {
 }
 
 
+.direction-down2 .flamme{
+    transform: scaleY(1);
+  }
+  
 
+  .direction-up2 .flamme{
+    transform: scaleY(-1);
+  }
+  
 @keyframes marche {
     from { background-position: 0 0; }
     to { background-position: -2000% 0; }
@@ -441,8 +459,8 @@ filter: blur(3px) contrast(10%);
 
 .galaxie {
     position: absolute;
-    left: 5vw;
-    top: 15vh;
+    left: 8vw;
+    top: 18vh;
     width: 15vw;
     height: 15vw;
     filter: drop-shadow(10px 10px 4px #4444dd);
@@ -450,9 +468,11 @@ filter: blur(3px) contrast(10%);
 }
 
 .cls-1 {
-    fill: #00918c;
-    stroke: #e2007c;
+    fill: linear-gradient(to right, yellow, red);
+   /* fill: #00918c74;*/
+    stroke: #384af1;
     stroke-miterlimit: 10;
+    stroke-width: 0.5px;
     filter: drop-shadow(30px 10px 40px #4444dd);
   }
 /*--------------------------------------------------------- 
@@ -549,6 +569,13 @@ filter: blur(3px) contrast(10%);
     width: 100vw;
     height: 70vh;
 }
+
+
+
+
+
+
+
 
 
 
