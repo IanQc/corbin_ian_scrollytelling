@@ -167,10 +167,10 @@ footer {
   
 
 .pod2 {
-    opacity: 1;
+    opacity: 0;
     width: 2vw;
     position: absolute;
-    left: 30%;
+    left: 0%;
     top: 50vh;
     z-index: 1;
 }
@@ -497,7 +497,7 @@ filter: blur(3px) contrast(10%);
 .satellite {
     position: absolute;
     width: 15vw;
-    left: 8%;
+    left: -10%;
     top: 25%;
 }
 
@@ -558,6 +558,7 @@ filter: blur(3px) contrast(10%);
 .poisson {
     position: absolute;
     width: 2vw;
+    rotate: 90;
 }
 
 
@@ -572,11 +573,21 @@ filter: blur(3px) contrast(10%);
 
 
 
+.cloud_morphing {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 18vw;
+}
 
 
-
-
-
+.b2_morph {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    width: 8vw;
+    opacity: 0;
+}
 
 /*
 @media screen and (min-width: 2110px) {

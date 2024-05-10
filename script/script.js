@@ -3,13 +3,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MorphSVGPlugin);
 gsap.registerPlugin(DrawSVGPlugin);
-/*
-gsap.to(".oiseauMorph", {
 
-    morphSVG:".poissonMorph",
-    scrollTrigger: {
-        trigger: '.oiseauMorp',
-    }});*/
+
 /*------------Intro------------ */ 
 
 let timeline1 = gsap.timeline();
@@ -268,7 +263,7 @@ gsap.timeline({scrollTrigger: {
 gsap.to(".satellite", {
     x: "110vw", 
     
-    ease:"power1.out", 
+    ease:"none", 
 
     scrollTrigger: {
         trigger: ".satellite",
@@ -309,15 +304,15 @@ gsap.to(".planet4", {
 });
 
 gsap.to('.pod2', {
-    transformOrigin: '50% 50%',
+    transformOrigin: '100% 100%',
+    opacity:1,
     motionPath: {
-      
       path: [
         {x: "-10vw", y: "15vh"}, 
         {x: "10vw", y: "150vh"}, 
-        {x: "85vw", y: "375vh"}
+        {x: "70vw", y: "250vh"}, 
+        {x: "15vw", y: "375vh"}
       ],
-      
     },
     duration: 8,
     repeat: -1,
@@ -489,13 +484,20 @@ gsap.timeline({scrollTrigger: {
 
 let timeline8 = gsap.timeline({
     scrollTrigger: {
-        start: 'top 0',
-        end: 'bottom 0',
-        trigger: '#troposphere',
+        start: 'top 20%',
+        end: 'bottom -20%',
+        trigger: '.cloud_morph',
+        scrub:4,
         
     }
 });
-timeline8.to(".oiseauMorph", {morphSVG: ".poissonMorph", repeat: -1, ease:"power1.out"}, "+=0.2");
+timeline8.to(".cloud_morph", {
+    morphSVG: ".b2",
+    ease: "power1.out",
+    scrub: true,
+    
+  });
+//timeline8.to(".cloud_morph", {morphSVG: ".b2", ease:"power1.out"}, "+=0.5");
 
 gsap.set(["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],{drawSVG:"0% 0%"});
 
@@ -512,7 +514,7 @@ gsap.timeline({delay:1, scrollTrigger: {
     },
     {
       drawSVG:"0% 100%",
-      duration: 2,
+      duration: 1,
       stagger: {
         each: 0.3,
     }
