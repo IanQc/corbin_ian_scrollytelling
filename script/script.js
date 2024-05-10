@@ -47,7 +47,7 @@ gsap.to('.stars1', {
     y: '100%',
     scrollTrigger: {
       scrub: true,
-      markers: true,
+
       start: 'top 0',
       end: 'bottom 25%',
       trigger: '.stars1',
@@ -58,7 +58,7 @@ gsap.to('.stars2', {
 y: '100%',
 scrollTrigger: {
     scrub: true,
-    markers: true,
+
     start: 'top 0',
     end: 'bottom 15%',
     trigger: '.stars2',
@@ -69,7 +69,7 @@ gsap.to('.stars3', {
 y: '100%',
 scrollTrigger: {
     scrub: true,
-    markers: true,
+
     start: 'top 0',
     end: 'bottom 35%',
     trigger: '.stars3',
@@ -80,7 +80,7 @@ gsap.to('header .stars4', {
 y: '100%',
 scrollTrigger: {
     scrub: true,
-    markers: true,
+
     start: 'top 0',
     end: 'bottom 25%',
     trigger: '.stars4',
@@ -92,7 +92,7 @@ gsap.to('#Deep_Space .stars1', {
     backgroundPosition: `50% ${-innerHeight / 2}px`,
     scrollTrigger: {
         scrub: true,
-        markers: true,
+
         trigger: '#Deep_Space',
     }
     })
@@ -101,7 +101,7 @@ gsap.to('#Deep_Space.stars4', {
     y: '100%',
     scrollTrigger: {
         scrub: true,
-        markers: true,
+
         start: 'top 0',
         end: 'bottom 25%',
         trigger: '.comete',
@@ -112,7 +112,7 @@ gsap.to('.stars5', {
 y: '50%',
 scrollTrigger: {
     scrub: true,
-    markers: true,
+
     start: 'top 0',
     end: 'bottom 0',
     trigger: '.stars5',
@@ -157,7 +157,7 @@ gsap.to('.pod', {
         opacity: 1,
         scrollTrigger: {
             scrub: true,
-            markers: true,
+
             start: 'top',
             end: 'bottom 20%',
             trigger: '#orbit',
@@ -209,7 +209,6 @@ gsap.to(".stars3", {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
-        markers: true
     }
 });
 
@@ -219,9 +218,7 @@ gsap.to(".stars3", {
 
 // Ajout de l'animation à la timeline
 gsap.timeline({scrollTrigger: {
-    //scrub: true,
-   //pin:true,
-    //markers:true,
+
     trigger: "#Deep_Space", // Élément qui déclenche l'animation
     start: "top -40vh", 
     end: "bottom",
@@ -278,7 +275,6 @@ gsap.to(".satellite", {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
-        markers: true
     }
 });
 
@@ -351,7 +347,6 @@ gsap.to(".nuage.quatre", {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
-        markers: true
     }
 });
 
@@ -363,7 +358,6 @@ gsap.to(".nuage.six", {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
-        markers: true
     }
 });
 */
@@ -372,7 +366,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#exosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['.nuages .nuage.un', '.nuages .nuage.quatre', '.nuages .nuage.six', '.nuages .nuage.neuf'], { 
     x: "-150vw", 
@@ -385,7 +378,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#exosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['.nuages .nuage.deux', '.nuages .nuage.trois', '.nuages .nuage.cinque', '.nuages .nuage.huit', '.nuages .nuage.dix'], { 
     x: "150vw", 
@@ -398,7 +390,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#thermosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#thermosphere .nuage.un', '#thermosphere .nuage.quatre', '#thermosphere .nuage.six', '#thermosphere .nuage.neuf', '#thermosphere .nuage.onze'], { 
     x: "-150vw", 
@@ -411,7 +402,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#thermosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#thermosphere .nuage.deux', '#thermosphere .nuage.trois', '#thermosphere .nuage.cinque', '#thermosphere .nuage.huit', '#thermosphere .nuage.dix', '#thermosphere .nuage.douze', '#thermosphere .nuage.treize'], { 
     x: "150vw", 
@@ -424,7 +414,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#mesosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#mesosphere .nuage.un', '#mesosphere .nuage.quatre'], { 
     x: "-150vw", 
@@ -437,7 +426,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#mesosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#mesosphere .nuage.deux', '#mesosphere .nuage.trois', '#mesosphere .nuage.cinque'], { 
     x: "150vw", 
@@ -450,7 +438,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#stratosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#stratosphere .nuage.un', '#stratosphere .nuage.quatre'], { 
     x: "-150vw", 
@@ -463,7 +450,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#stratosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#stratosphere .nuage.deux', '#stratosphere .nuage.trois', '#stratosphere .nuage.cinque'], { 
     x: "150vw", 
@@ -475,7 +461,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#stratosphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#stratosphere .oiseau.un', '#stratosphere .oiseau.deux', '#stratosphere .oiseau.trois', '#stratosphere .oiseau.quatre', '#stratosphere .oiseau.cinque'], { 
     x: "120vw", 
@@ -491,7 +476,6 @@ gsap.timeline({scrollTrigger: {
     trigger: "#troposphere",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
 .to(['#troposphere .oiseau.un', '#troposphere .oiseau.deux', '#troposphere .oiseau.trois', '#troposphere .oiseau.quatre', '#troposphere .oiseau.cinque', '#troposphere .oiseau.six'], { 
     x: "120vw", 
@@ -505,8 +489,6 @@ gsap.timeline({scrollTrigger: {
 
 let timeline8 = gsap.timeline({
     scrollTrigger: {
-        
-        markers: false,
         start: 'top 0',
         end: 'bottom 0',
         trigger: '#troposphere',
@@ -522,7 +504,6 @@ gsap.timeline({delay:1, scrollTrigger: {
     trigger: "#Deep_Space",
     start: "top bottom",
     end: "bottom top",
-    markers: true
 }})
   .fromTo(
     ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
@@ -564,7 +545,6 @@ gsap.fromTo('.oiseau.cinque', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1
         trigger: "#exosphere",
         start: "top bottom",
         end: "bottom top",
-        markers: true
     }
 });*/
 
