@@ -6,7 +6,6 @@ gsap.registerPlugin(DrawSVGPlugin);
 
 
 /*------------Intro------------ */ 
-
 let timeline1 = gsap.timeline();
 
 
@@ -31,170 +30,27 @@ timeline1.to(".titreAnim", {
     text: "© 2024 - Conception : Ian Corbin | Développement Web : Ian Corbin"
 }, "-=1");
 
-/*
-gsap.to('.stars2', {
-  scrollTrigger: 'stars2',
-  y: '100%',
-  duration: 2,
-});*/
-/*
-gsap.to('.stars1', { 
-    y: '100%',
-    scrollTrigger: {
-      scrub: true,
-
-      start: 'top 0',
-      end: 'bottom 25%',
-      trigger: '.stars1',
-    }
-  })*/
-
 gsap.to('.stars2', { 
-y: '100%',
-scrollTrigger: {
-    scrub: true,
-
-    start: 'top 0',
-    end: 'bottom 15%',
-    trigger: '.stars2',
-}
-})
-    
-gsap.to('.stars3', { 
-y: '100%',
-scrollTrigger: {
-    scrub: true,
-
-    start: 'top 0',
-    end: 'bottom 35%',
-    trigger: '.stars3',
-}
-})
-    
-gsap.to('header .stars4', { 
-y: '100%',
-scrollTrigger: {
-    scrub: true,
-
-    start: 'top 0',
-    end: 'bottom 25%',
-    trigger: '.stars4',
-}
-})
-
-gsap.to('#Deep_Space .stars1', { 
-    y: '5%',
-    backgroundPosition: `50% ${-innerHeight / 2}px`,
-    scrollTrigger: {
-        scrub: true,
-
-        trigger: '#Deep_Space',
-    }
-    })
-/*
-gsap.to('#Deep_Space.stars4', { 
     y: '100%',
     scrollTrigger: {
         scrub: true,
-
+    
         start: 'top 0',
-        end: 'bottom 25%',
-        trigger: '.comete',
+        end: 'bottom 15%',
+        trigger: '.stars2',
     }
     })
-    */
-gsap.to('.stars5', { 
-y: '50%',
-scrollTrigger: {
-    scrub: true,
-
-    start: 'top 0',
-    end: 'bottom 0',
-    trigger: '.stars5',
-}
-})
-  
-  function noActif() {
-    body.classList.remove('is-scrolling');
-  }
-  const body = document.querySelector('body');
-    
-gsap.to('.pod', { 
-    opacity:1 ,
+        
+    gsap.to('.stars3', { 
+    y: '100%',
     scrollTrigger: {
         scrub: true,
-        start: 'top',
-        end: 'bottom',
-        trigger: '.titre',
- }});
-
-            
-gsap.to('.pod', { 
-    scrollTrigger: {
-        start: 'top',
-        end: 'bottom',
-        trigger: body,
-        onUpdate: function(e) {
-            if (e.direction == -1) {
-              body.classList.remove('direction-down');
-              body.classList.add('direction-up');
-            }
-            else if (e.direction == 1) {
-              body.classList.add('direction-down');
-              body.classList.remove('direction-up');
-            }   
-          }
-        }});
-   
-
-
-    gsap.to('.flamme', { 
-        opacity: 1,
-        scrollTrigger: {
-            scrub: true,
-
-            start: 'top',
-            end: 'bottom 20%',
-            trigger: '#orbit',
-            onEnter: function() {
-                document.querySelector('.flamme').style.animationPlayState = 'running';
-            },
-            onLeaveBack: function() {
-                document.querySelector('.flamme').style.animationPlayState = 'paused';
-            }
-        }
-    });
     
-    gsap.to('.flamme', { 
-        scrollTrigger: {
-            start: 'top',
-            end: 'bottom',
-            trigger: body,
-            onUpdate: function(e) {
-                if (e.direction == -1) {
-                  body.classList.remove('direction-down2');
-                  body.classList.add('direction-up2');
-                }
-                else if (e.direction == 1) {
-                  body.classList.add('direction-down2');
-                  body.classList.remove('direction-up2');
-                }
-              }
-            }});
-
-    
-
-
-gsap.timeline().from(['.fleche-down'], {
-    duration: 0.8,
-    opacity: 0,
-    repeat: -1,
-    ease: 'slow',
-    stagger: {
-        each: 0.5,
-    },
-})
-
+        start: 'top 0',
+        end: 'bottom 35%',
+        trigger: '.stars3',
+    }
+    })
 
 gsap.to(".stars3", {
     backgroundPosition: "50% 100%",
@@ -207,14 +63,90 @@ gsap.to(".stars3", {
     }
 });
 
+        
+    gsap.to('header .stars4', { 
+    y: '100%',
+    scrollTrigger: {
+        scrub: true,
+    
+        start: 'top 0',
+        end: 'bottom 25%',
+        trigger: '.stars4',
+    }
+    })
+    
+    gsap.to('.stars5', { 
+        y: '50%',
+        scrollTrigger: {
+            scrub: true,
+        
+            start: 'top 0',
+            end: 'bottom 0',
+            trigger: '.stars5',
+        }
+        })
 
 
+gsap.timeline().from(['.fleche-down'], {
+    duration: 0.8,
+    opacity: 0,
+    repeat: -1,
+    ease: 'slow',
+    stagger: {
+        each: 0.5,
+    },
+})
+
+/*--------------------------------------------------------- 
+# Chapitre1
+---------------------------------------------------------*/ 
+gsap.to('#Deep_Space .stars1', { 
+    y: '5%',
+    backgroundPosition: `50% ${-innerHeight / 2}px`,
+    scrollTrigger: {
+        scrub: true,
+
+        trigger: '#Deep_Space',
+    }
+    })
 
 
-// Ajout de l'animation à la timeline
+    function noActif() {
+        body.classList.remove('is-scrolling');
+      }
+      const body = document.querySelector('body');
+        
+    gsap.to('.pod', { 
+        opacity:1 ,
+        scrollTrigger: {
+            scrub: true,
+            start: 'top',
+            end: 'bottom',
+            trigger: '.titre',
+     }});
+    
+                
+    gsap.to('.pod', { 
+        scrollTrigger: {
+            start: 'top',
+            end: 'bottom',
+            trigger: body,
+            onUpdate: function(e) {
+                if (e.direction == -1) {
+                  body.classList.remove('direction-down');
+                  body.classList.add('direction-up');
+                }
+                else if (e.direction == 1) {
+                  body.classList.add('direction-down');
+                  body.classList.remove('direction-up');
+                }   
+              }
+            }});
+       
+
 gsap.timeline({scrollTrigger: {
 
-    trigger: "#Deep_Space", // Élément qui déclenche l'animation
+    trigger: "#Deep_Space", 
     start: "top -40vh", 
     end: "bottom",
 }})
@@ -255,10 +187,70 @@ gsap.timeline({scrollTrigger: {
     
 });
 
+gsap.to(".planet3", {
+    y: "400%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#Deep_Space",
+      scrub: true
+    }
+});
+
+gsap.to(".planet4", {
+    y: "-1000%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#Deep_Space",
+      scrub: true
+    }
+});
+
+gsap.to(".galaxie", {
+    rotation: 360,
+    ease: "none",
+    duration: 8,
+    repeat:-1,
+    scrollTrigger: {
+      trigger: ".galaxie",
+    }
+});
 
 
+gsap.set(["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],{drawSVG:"0% 0%"});
 
-//gsap.fromTo('.satellite', {x: "-40vw"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 2 , duration:20});
+gsap.timeline({delay:1, scrollTrigger: {
+    
+    trigger: "#Deep_Space",
+    start: "top bottom",
+    end: "bottom top",
+}})
+  .fromTo(
+    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
+     {
+      drawSVG:"0% 0%"
+    },
+    {
+      drawSVG:"0% 100%",
+      duration: 1,
+      stagger: {
+        each: 0.3,
+    }
+    }
+  )
+  .fromTo(
+    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
+    {
+      fillOpacity: 0
+    },
+    {
+      fillOpacity: 0.7,
+      duration: 2
+    }
+  );
+
+/*--------------------------------------------------------- 
+# Chapitre2
+---------------------------------------------------------*/
 
 gsap.to(".satellite", {
     x: "110vw", 
@@ -272,90 +264,46 @@ gsap.to(".satellite", {
         scrub: true,
     }
 });
-
-gsap.to(".planet3", {
-    y: "400%",
-    ease: "none",
+/*--------------------------------------------------------- 
+# Chapitre3
+---------------------------------------------------------*/  
+gsap.to('.flamme', { 
+    opacity: 1,
     scrollTrigger: {
-      trigger: "#Deep_Space",
-      scrub: true
-    }
-});
-
-
-gsap.to(".galaxie", {
-    rotation: 360,
-    ease: "none",
-    duration: 8,
-    repeat:-1,
-    scrollTrigger: {
-      trigger: ".galaxie",
-    }
-});
-
-
-gsap.to(".planet4", {
-    y: "-1000%",
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#Deep_Space",
-      scrub: true
-    }
-});
-
-gsap.to('.pod2', {
-    transformOrigin: '100% 100%',
-    opacity:1,
-    motionPath: {
-      path: [
-        {x: "-10vw", y: "15vh"}, 
-        {x: "10vw", y: "150vh"}, 
-        {x: "70vw", y: "250vh"}, 
-        {x: "15vw", y: "375vh"}
-      ],
-    },
-    duration: 8,
-    repeat: -1,
-    scrollTrigger: {
-        trigger: "#troposphere",
-      }
-  })
-
-
-/*
-
-gsap.to(section.bg, {
-    backgroundPosition: `50% ${-innerHeight / 2}px`,
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      scrub: true
-    }
-  });*/
-
-/*
-gsap.to(".nuage.quatre", {
-    x: "-600%", 
-    ease:"power1.out", 
-    scrollTrigger: {
-        trigger: ".nuage.quatre",
-        start: "top bottom",
-        end: "bottom top",
         scrub: true,
+
+        start: 'top',
+        end: 'bottom 20%',
+        trigger: '#orbit',
+        onEnter: function() {
+            document.querySelector('.flamme').style.animationPlayState = 'running';
+        },
+        onLeaveBack: function() {
+            document.querySelector('.flamme').style.animationPlayState = 'paused';
+        }
     }
 });
 
-gsap.to(".nuage.six", {
-    x: "-800%", 
-    ease:"power1.out", 
+gsap.to('.flamme', { 
     scrollTrigger: {
-        trigger: ".nuage.six",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-    }
-});
-*/
+        start: 'top',
+        end: 'bottom',
+        trigger: body,
+        onUpdate: function(e) {
+            if (e.direction == -1) {
+              body.classList.remove('direction-down2');
+              body.classList.add('direction-up2');
+            }
+            else if (e.direction == 1) {
+              body.classList.add('direction-down2');
+              body.classList.remove('direction-up2');
+            }
+          }
+        }});
+
+/*--------------------------------------------------------- 
+# Chapitre4
+---------------------------------------------------------*/ 
 
 gsap.timeline({scrollTrigger: {
     trigger: "#exosphere",
@@ -380,7 +328,9 @@ gsap.timeline({scrollTrigger: {
     duration: 13,
 });
 
-
+/*--------------------------------------------------------- 
+# Chapitre5
+---------------------------------------------------------*/ 
 gsap.timeline({scrollTrigger: {
     trigger: "#thermosphere",
     start: "top bottom",
@@ -403,8 +353,9 @@ gsap.timeline({scrollTrigger: {
     repeat: -1, 
     duration: 13,
 });
-
-
+/*--------------------------------------------------------- 
+# Chapitre6
+---------------------------------------------------------*/ 
 gsap.timeline({scrollTrigger: {
     trigger: "#mesosphere",
     start: "top bottom",
@@ -428,6 +379,9 @@ gsap.timeline({scrollTrigger: {
     duration: 13,
 });
 
+/*--------------------------------------------------------- 
+# Chapitre7
+---------------------------------------------------------*/ 
 
 gsap.timeline({scrollTrigger: {
     trigger: "#stratosphere",
@@ -462,12 +416,33 @@ gsap.timeline({scrollTrigger: {
     repeat: -1, 
     duration:8,
     stagger: {
-        each: 1, // délai d'1 seconde entre le début de chaque animation
-        from: "start" // commence le décompte à partir du début de chaque animation
+        each: 1,
+        from: "start"
     }
 });
+/*--------------------------------------------------------- 
+# Chapitre8
+---------------------------------------------------------*/ 
+gsap.to('.pod2', {
+    transformOrigin: '100% 100%',
+    opacity:1,
+    motionPath: {
+      path: [
+        {x: "-10vw", y: "15vh"}, 
+        {x: "10vw", y: "150vh"}, 
+        {x: "70vw", y: "250vh"}, 
+        {x: "15vw", y: "375vh"}
+      ],
+    },
+    duration: 8,
+    repeat: -1,
+    scrollTrigger: {
+        trigger: "#troposphere",
+      }
+  })
 
-gsap.timeline({scrollTrigger: {
+
+  gsap.timeline({scrollTrigger: {
     trigger: "#troposphere",
     start: "top bottom",
     end: "bottom top",
@@ -477,168 +452,26 @@ gsap.timeline({scrollTrigger: {
     repeat: -1, 
     duration:8,
     stagger: {
-        each: 1, // délai d'1 seconde entre le début de chaque animation
-        from: "start" // commence le décompte à partir du début de chaque animation
+        each: 1,
+        from: "start"
     }
 });
 
+
+
 let timeline8 = gsap.timeline({
     scrollTrigger: {
-        start: 'top 20%',
-        end: 'bottom -20%',
+        start: 'top 40%',
+        end: 'bottom 40%',
         trigger: '.cloud_morph',
-        scrub:4,
+        
         
     }
 });
 timeline8.to(".cloud_morph", {
+    scale:2,
     morphSVG: ".b2",
     ease: "power1.out",
-    scrub: true,
     
   });
-//timeline8.to(".cloud_morph", {morphSVG: ".b2", ease:"power1.out"}, "+=0.5");
-
-gsap.set(["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],{drawSVG:"0% 0%"});
-
-gsap.timeline({delay:1, scrollTrigger: {
-    
-    trigger: "#Deep_Space",
-    start: "top bottom",
-    end: "bottom top",
-}})
-  .fromTo(
-    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
-     {
-      drawSVG:"0% 0%"
-    },
-    {
-      drawSVG:"0% 100%",
-      duration: 1,
-      stagger: {
-        each: 0.3,
-    }
-    }
-  )
-  .fromTo(
-    ["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],
-    {
-      fillOpacity: 0
-    },
-    {
-      fillOpacity: 0.7,
-      duration: 2
-    }
-  );
-/*
-gsap.fromTo('.oiseau.un', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:8});
-gsap.fromTo('.oiseau.deux', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 3, duration:5});
-gsap.fromTo('.oiseau.trois', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:10});
-gsap.fromTo('.oiseau.quatre', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", delay: 1, duration:4});
-gsap.fromTo('.oiseau.cinque', {x: "-200%"}, {x: "110vw", repeat:-1, ease:"power1.out", duration:9});
-
-*/
-/*gsap.to(".nuage.un", {
-    x: "-600%", 
-    repeat:-1,
-    ease:"power1.out",  
-    duration:10,
-    scrollTrigger: {
-        trigger: "#exosphere",
-        start: "top bottom",
-        end: "bottom top",
-    }
-});*/
-
-
-//gsap.fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 2 , duration:10});
-//gsap.fromTo('.nuage.six', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out", duration:14});
-//gsap.fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 4, duration:20});
-//gsap.fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15});
-//gsap.fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 3, duration:15});
-
-/*gsap.fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10});
-gsap.fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 6, duration:14});
-gsap.fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12});
-gsap.fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 2, duration:15});
-gsap.fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15});
-gsap.fromTo('.nuage.douze', {x: "800%"}, {x: "-700%", repeat:-1, ease:"power1.out", delay: 3, duration:16});
-gsap.fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
-*/
-
-
-
-
-/*
-gsap.to('.comete', { 
-    opacity:1 ,
-    x: "110vw", y:"90vh", ease:"none", duration:5,repeat: -1,
-    scrollTrigger: {
-        start: 'top',
-        end: 'bottom',
-        trigger: '#DeepSpace',
-        
-    }
-    })*/
-
-
-
-/*
-    gsap.to('.comete', { 
-        x: "-110vw", y:"90vh", ease:"none", duration:5, rotation: 180,
-        scrollTrigger: {
-            start: 'top 50%',
-            end: 'bottom',
-            trigger: '#DeepSpace',
-        }
-        })
-/*
-gsap.fromTo('.comete', { y:"10vh"}, {x: "110vw", y:"90vh", repeat:-1, ease:"none", duration:5});
-  */
-
-
-/*
-// Création de la timeline
-let timeline4 = gsap.timeline({ repeat: -1 });
-
-// Ajout des animations à la timeline
-timeline4.fromTo('.nuage.quatre', { x: "250%" }, { x: "-600%", ease: "power1.out", delay: 2, duration: 10 });
-timeline4.fromTo('.nuage.six', { x: "200%" }, { x: "-600%", ease: "power1.out", duration: 14 }, );
-timeline4.fromTo('.nuage.un', { x: "200%" }, { x: "-600%", ease: "power1.out", delay: 4, duration: 20 }, );
-timeline4.fromTo('.nuage.neuf', { x: "200%" }, { x: "-600%", ease: "power1.out", duration: 15 }, );
-timeline4.fromTo('.nuage.onze', { x: "200%" }, { x: "-800%", ease: "power1.out", delay: 3, duration: 15 },);
-
-timeline4.fromTo('.nuage.deux', { x: "-200%" }, { x: "600%", ease: "power1.out", duration: 10 }, );
-timeline4.fromTo('.nuage.trois', { x: "-200%" }, { x: "600%", ease: "power1.out", delay: 6, duration: 14 }, );
-timeline4.fromTo('.nuage.cinque', { x: "-300%" }, { x: "600%", ease: "power1.out", duration: 12 }, );
-timeline4.fromTo('.nuage.huit', { x: "-400%" }, { x: "400%", ease: "power1.out", delay: 2, duration: 15 }, );
-timeline4.fromTo('.nuage.dix', { x: "-200%" }, { x: "600%", ease: "power1.out", duration: 15 }, );
-timeline4.fromTo('.nuage.douze', { x: "-200%" }, { x: "600%", ease: "power1.out", delay: 3, duration: 10 }, );
-timeline4.fromTo('.nuage.treize', { x: "-200%" }, { x: "700%", ease: "power1.out", duration: 10 }, );
-*/
-
-
-
-/*
-let nuageTime = gsap.timeline();
-
-nuageTime
-    .fromTo('.nuage.quatre', {x: "250%"}, {x: "-600%", repeat:-1, ease:"power1.out", delay: 0, duration:10})
-    .fromTo('.nuage.six', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:14})
-    .fromTo('.nuage.un', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out",delay: 0, duration:20})
-    .fromTo('.nuage.neuf', {x: "200%"}, {x: "-600%", repeat:-1, ease:"power1.out", duration:15})
-    .fromTo('.nuage.onze', {x: "200%"}, {x: "-800%", repeat:-1, ease:"power1.out",delay: 0, duration:15})
-    .fromTo('.nuage.deux', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:10})
-    .fromTo('.nuage.trois', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", delay: 0, duration:14})
-    .fromTo('.nuage.cinque', {x: "-300%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:12})
-    .fromTo('.nuage.huit', {x: "-400%"}, {x: "400%", repeat:-1, ease:"power1.out",delay: 0, duration:15})
-    .fromTo('.nuage.dix', {x: "-200%"}, {x: "600%", repeat:-1, ease:"power1.out", duration:15})
-    .fromTo('.nuage.douze', {x: "800%"}, {x: "-700%", repeat:-1, ease:"power1.out", delay: 0, duration:16})
-    .fromTo('.nuage.treize', {x: "-200%"}, {x: "700%", repeat:-1, ease:"power1.out", duration:10});
-
-nuageTime.play(); 
-*/
-
-
-
-
+  
