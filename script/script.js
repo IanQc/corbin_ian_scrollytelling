@@ -1,9 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(TextPlugin);
-//gsap.registerPlugin(MorphSVGPlugin);
-//gsap.registerPlugin(DrawSVGPlugin);
-
+gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.config({trialWarn: true});
 
 /*------------Intro------------ */ 
 let timeline1 = gsap.timeline();
@@ -215,7 +215,7 @@ gsap.to(".galaxie", {
     }
 });
 
-/*
+
 gsap.set(["#galaxie-1", "#galaxie-2", "#galaxie-3", "#galaxie-4", "#galaxie-5", "#galaxie-6", "#galaxie-7", "#galaxie-8", "#galaxie-9", "#galaxie-10", "#galaxie-11", "#galaxie-12", "#galaxie-13", "#galaxie-14", "#galaxie-15", "#galaxie-16", "#galaxie-17", "#galaxie-18", "#galaxie-19", "#galaxie-20", "#galaxie-21"],{drawSVG:"0% 0%"});
 
 gsap.timeline({delay:1, scrollTrigger: {
@@ -246,7 +246,7 @@ gsap.timeline({delay:1, scrollTrigger: {
       fillOpacity: 0.7,
       duration: 2
     }
-  );*/
+  );
 
 /*--------------------------------------------------------- 
 # Chapitre2
@@ -459,7 +459,7 @@ gsap.to('.pod2', {
 
 
 
-/*let timeline8 = gsap.timeline({
+let timeline8 = gsap.timeline({
     scrollTrigger: {
         start: 'top 40%',
         end: 'bottom 40%',
@@ -474,4 +474,4 @@ timeline8.to(".cloud_morph", {
     ease: "power1.out",
     
   });
-  */
+  

@@ -44,7 +44,7 @@ section{
 header {
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/img_arriere_plan/intro/galaxy-night-panoramic.jpg) ;
+    background-image: url(../img/img_arriere_plan/intro/galaxy-night-panoramic.webp) ;
     
     text-align: center;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ ul.technique-gsap li{
 }
 
 footer {
-    background-image: url(../img/img_arriere_plan/intro/galaxy-night-panoramic.jpg);
+    background-image: url(../img/img_arriere_plan/intro/galaxy-night-panoramic.webp);
     text-align: center;
     background-color: var(--noir);
     color: var(--blanc);
@@ -177,7 +177,7 @@ footer p {
 }
 
 .flamme {
-    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).png);
+    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_02_flamme\ \(2\).webp);
     width: 9.5vw;
     opacity: 0;
     aspect-ratio: 1/1;
@@ -378,7 +378,7 @@ filter: blur(3px) contrast(10%);
 # Chapitre1
 ---------------------------------------------------------*/ 
 #Deep_Space {
-    background-image: url(../img/img_arriere_plan/background_ciel_00.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_00.webp) ;
     position: relative;
 
 }
@@ -396,7 +396,7 @@ filter: blur(3px) contrast(10%);
 }
 
 .comete {
-    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_01.png);
+    background-image: url(../img/img_elements_visuels/spritesheet/spritesheet_01.webp);
     width: 5vw; 
     aspect-ratio: 1/1;
     animation-name: marche2;
@@ -424,7 +424,7 @@ filter: blur(3px) contrast(10%);
 }
 
 .planet3 {
-    background-image: url(../img/img_elements_visuels/planet.png);
+    background-image: url(../img/img_elements_visuels/planet.webp);
     background-size: cover;
     position: absolute;
     width: 30vw;
@@ -437,7 +437,7 @@ filter: blur(3px) contrast(10%);
 }
 
 .planet4 {
-    background-image: url(../img/img_elements_visuels/planet2.png);
+    background-image: url(../img/img_elements_visuels/planet2.webp);
     background-size: cover;
     position: absolute;
     width: 20vw;
@@ -477,7 +477,7 @@ filter: blur(3px) contrast(10%);
 # Chapitre2
 ---------------------------------------------------------*/ 
 #Space {
-    background-image: url(../img/img_arriere_plan/background_ciel_01.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_01.webp) ;
     position: relative;
 }
 
@@ -508,7 +508,7 @@ filter: blur(3px) contrast(10%);
 # Chapitre3
 ---------------------------------------------------------*/ 
 #orbit {
-    background-image: url(../img/img_arriere_plan/background_ciel_02.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_02.webp) ;
     position: relative;
 }
 
@@ -516,7 +516,7 @@ filter: blur(3px) contrast(10%);
 # Chapitre4
 ---------------------------------------------------------*/ 
 #exosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_03.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_03.webp) ;
     position: relative;
 }
 
@@ -524,28 +524,28 @@ filter: blur(3px) contrast(10%);
 # Chapitre5
 ---------------------------------------------------------*/ 
 #thermosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_04.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_04.webp) ;
     position: relative;
 }
 /*--------------------------------------------------------- 
 # Chapitre6
 ---------------------------------------------------------*/ 
 #mesosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_05.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_05.webp) ;
     position: relative;
 }
 /*--------------------------------------------------------- 
 # Chapitre7
 ---------------------------------------------------------*/ 
 #stratosphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_06.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_06.webp) ;
     position: relative;
 }
 /*--------------------------------------------------------- 
 # Chapitre8
 ---------------------------------------------------------*/ 
 #troposphere {
-    background-image: url(../img/img_arriere_plan/background_ciel_07.png) ;
+    background-image: url(../img/img_arriere_plan/background_ciel_07.webp) ;
     position: relative;
 }
 .sol {
